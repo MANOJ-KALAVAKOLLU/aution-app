@@ -1,0 +1,210 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #1b1b2f, #141423);
+  color: #e5e7eb;
+  padding: 20px;
+}
+
+/* =========================
+   LINKS & NAV
+========================= */
+a {
+  text-decoration: none;
+  color: #facc15;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #fde047;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+nav a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  background: #27273a;
+}
+
+nav a:hover {
+  background: #facc15;
+  color: #1b1b2f;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: #facc15;
+}
+
+h3 {
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  background: linear-gradient(180deg, #24243a, #1e1e32);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  max-width: 700px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #3b3b55;
+  background: #1c1c2b;
+  color: #f9fafb;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.25);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(180deg, #facc15, #eab308);
+  color: #1b1b2f;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(250, 204, 21, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   SELECT (CAPTAINS)
+========================= */
+.select-wrapper {
+  position: relative;
+  min-width: 200px;
+}
+
+.select-box {
+  width: 100%;
+  padding: 12px 44px 12px 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 1px solid #3b3b55;
+  background: #1c1c2b;
+  color: #f9fafb;
+  appearance: none;
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.select-box:focus {
+  outline: none;
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.25);
+}
+
+.select-wrapper::after {
+  content: "▾";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* =========================
+   BID HISTORY
+========================= */
+.bid-history {
+  margin-top: 10px;
+  background: #181827;
+  border-radius: 12px;
+  padding: 14px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.bid-history li {
+  padding: 8px 6px;
+  border-bottom: 1px solid #2f2f48;
+  font-size: 14px;
+}
+
+.bid-history li:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   LAYOUT HELPERS
+========================= */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+.app-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin-bottom: 16px;
+
+  /* ✅ Responsive font size */
+  font-size: clamp(1.4rem, 5vw, 2.6rem);
+
+  /* Colors */
+  color: #facc15;
+
+  /* Subtle premium glow */
+  text-shadow:
+    0 2px 6px rgba(250, 204, 21, 0.35),
+    0 0 20px rgba(250, 204, 21, 0.15);
+}
